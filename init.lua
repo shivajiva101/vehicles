@@ -72,8 +72,8 @@ minetest.register_entity("vehicles:missile", {
 							full_punch_interval=1.0,
 							damage_groups={fleshy=12},
 						}, nil)
-						local pos = self.object:getpos()
-						tnt.boom(pos, {damage_radius=5,radius=5,ignore_protection=false})
+						--local pos = self.object:getpos()
+						--tnt.boom(pos, {damage_radius=5,radius=5,ignore_protection=false})
 						self.object:remove()
 					end
 				end
@@ -86,8 +86,8 @@ minetest.register_entity("vehicles:missile", {
 								local t = {x=pos.x+dx, y=pos.y+dy, z=pos.z+dz}
 								local n = minetest.env:get_node(p).name
 								if n ~= "vehicles:missile" and n ~= "vehicles:jet" and n ~= "air" then
-									local pos = self.object:getpos()
-									tnt.boom(pos, {damage_radius=5,radius=5,ignore_protection=false})
+									--local pos = self.object:getpos()
+									--tnt.boom(pos, {damage_radius=5,radius=5,ignore_protection=false})
 									self.object:remove()
 									return
 								end
@@ -183,7 +183,7 @@ minetest.register_entity("vehicles:missile_2", {
 			collisiondetection = false,
 			texture = "vehicles_explosion.png"
 		})
-									tnt.boom(pos, {damage_radius=5,radius=5,ignore_protection=false})
+									--tnt.boom(pos, {damage_radius=5,radius=5,ignore_protection=false})
 									self.object:remove()
 									return
 								end
